@@ -1,5 +1,5 @@
-# Colosseum Young Gladiators 2023
-### June 5-7, 2023
+# Colosseum Young Gladiators 2024
+### June 3-5, 2024
 
 <p align="middle">
   <img src="images/colosseum-1.jpg" width="49%" /> 
