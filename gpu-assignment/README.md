@@ -2,13 +2,15 @@
 
 This document provides instructions for testing the performance of GPUs on Colosseum and running a PyTorch example for image classification using transfer learning.
 
-The link for Example (Transfer Learning for Computer Vision Tutorial)[https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html]
+The link for Example [Transfer Learning for Computer Vision Tutorial](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
 
 ## Connecting to Colosseum
 
-1. Connect to Colosseum and reserve a GPU with the PyTorch image.
+1. Connect to Colosseum VPN (instructions [here](https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect-remote-vpn-access) and login to [Colosseum website](https://experiments.colosseum.net)).
 
-2. SSH into Colosseum using the following command:
+2. Connect to Colosseum and reserve a GPU with the PyTorch image (base-pytorch:1.0).
+
+3. SSH into Colosseum using the following command:
     ```
     ssh root@host-name -p [port]
     ```
@@ -32,9 +34,9 @@ Once you have successfully SSHed into Colosseum, set up two terminals for differ
 
 ## Code Setup
 
-1. Clone or copy the code for the image classification example into the container.
+1. Clone or copy the [code](https://github.com/pytorch/tutorials/blob/main/beginner_source/transfer_learning_tutorial.py) for the image classification example into the container. 
 
-2. Download the dataset from the PyTorch website.
+2. Download the [dataset](https://download.pytorch.org/tutorial/hymenoptera_data.zip) from the PyTorch website. You use `wget` or any other command. 
 
 3. Create a directory named `data/` to store the dataset.
     ```
