@@ -25,7 +25,7 @@ After the initial overview of Colosseum, attendees will be guided to the usage o
 
 
 ## Agenda
-The agenda for the Colosseum Master Class can be found [here](https://www.younggladiators.net/schedule).
+The agenda for the Colosseum Master Class can be found [here](https://colosseum.sites.northeastern.edu/colosseum-young-gladiators-2024/).
 
 
 ## Requirements for the attendees
@@ -41,6 +41,6 @@ Alternatively, a machine with [VirtualBox](https://www.virtualbox.org/) or [VMwa
 - User accounts to access the Colosseum system have been sent to all the attendees. Credentials for the experimental portal, and for the help desk will be sent via email. You should have received two different sets of credentials, be sure to check your spam folder.
 (For appropriate access to all the course contents, we recommend that you use this account during this course, even if you already have another Colosseum account.)
 - Once the Colosseum account has been received, users are expected to go through the following set-up guides before the course:
-    - [Cisco AnyConnect Remote VPN Access](https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect-remote-vpn-access)
-    - [Accessing Colosseum Resources](https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing-colosseum-resources)
-    - [Upload SSH Public Keys](https://colosseumneu.freshdesk.com/support/solutions/articles/61000253402-upload-ssh-public-keys)
+    - [Cisco AnyConnect Remote VPN Access](https://colosseumwireless.readthedocs.io/en/latest/getting_started/cisco_anyconnect_remote_vpn_access.html)
+    - [Accessing Colosseum Resources](https://colosseumwireless.readthedocs.io/en/latest/getting_started/accessing_colosseum_resources.html)
+    - [Upload SSH Public Keys](https://colosseumwireless.readthedocs.io/en/latest/getting_started/upload_ssh_keys.html)

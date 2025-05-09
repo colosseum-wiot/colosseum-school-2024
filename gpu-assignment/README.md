@@ -6,7 +6,7 @@ The link for Example [Transfer Learning for Computer Vision Tutorial](https://py
 
 ## Connecting to Colosseum
 
-1. Connect to Colosseum VPN (instructions [here](https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect-remote-vpn-access) and login to [Colosseum website](https://experiments.colosseum.net)).
+1. Connect to Colosseum VPN (instructions [here](https://colosseumwireless.readthedocs.io/en/latest/getting_started/cisco_anyconnect_remote_vpn_access.html) and login to [Colosseum website](https://experiments.colosseum.net)).
 
 2. Connect to Colosseum and reserve a GPU with the PyTorch image (base-pytorch:1.0).
 

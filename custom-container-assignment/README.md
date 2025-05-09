@@ -4,9 +4,9 @@ In this assignment, we will first create a custom LXC container by adding a Grap
 
 ## Pre-requisites
 
-- A Linux OS (e.g., Ubuntu) with [Colossum VPN](https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect-remote-vpn-access) and LXC installed. If you are using the virtual machine provided by the Colosseum team, these steps are already covered and you just need to setup your identity.
-- Students have set up their SSH keys ([Upload SSH Public Keys](https://colosseumneu.freshdesk.com/en/support/solutions/articles/61000253402-upload-ssh-public-keys)) and SSH file-proxy ([SSH Proxy Setup](https://colosseumneu.freshdesk.com/en/support/solutions/articles/61000253369-ssh-proxy-setup)).
-- Students are able to successfully access to Colosseum resources ([Accessing Colosseum Resources](https://colosseumneu.freshdesk.com/en/support/solutions/articles/61000253362-accessing-colosseum-resources)), e.g., log into the SSH gateway and file-proxy servers.
+- A Linux OS (e.g., Ubuntu) with [Colossum VPN](https://colosseumwireless.readthedocs.io/en/latest/getting_started/cisco_anyconnect_remote_vpn_access.html) and LXC installed. If you are using the virtual machine provided by the Colosseum team, these steps are already covered and you just need to setup your identity.
+- Students have set up their SSH keys ([Upload SSH Public Keys](https://colosseumwireless.readthedocs.io/en/latest/getting_started/upload_ssh_keys.html)) and SSH file-proxy ([SSH Proxy Setup](https://colosseumwireless.readthedocs.io/en/latest/getting_started/ssh_proxy_setup.html)).
+- Students are able to successfully access to Colosseum resources ([Accessing Colosseum Resources](https://colosseumwireless.readthedocs.io/en/latest/getting_started/accessing_colosseum_resources.html)), e.g., log into the SSH gateway and file-proxy servers.
 - Students are assigned to the Colosseum team `gladiators`. (Even if you have already a Colosseum account, please use the accounts that has been created for you for the Colosseum school.)
 
 ## Container Customization
@@ -94,9 +94,9 @@ Colosseum presents to its users the available containers images in the related t
 
 1. Login to [Colosseum website](https://experiments.colosseum.net).
 
-2. Make a reservation with the `insert_your_last_name` image created in the previous step. The reservation should have two SRNs (see instructions on [Making a Reservation](https://colosseumneu.freshdesk.com/en/support/solutions/articles/61000253463-making-a-reservation-interactive-and-batch-mode-)). Call the reservation in a meaningful way (e.g., your name). Two hours should suffice.
+2. Make a reservation with the `insert_your_last_name` image created in the previous step. The reservation should have two SRNs (see instructions on [Making a Reservation](https://colosseumwireless.readthedocs.io/en/latest/reservations/making_a_reservation_interactive_and_batch_mode.html)). Call the reservation in a meaningful way (e.g., your name). Two hours should suffice.
 
-3. In the reservation page, you can find the assigned SRNs/nodes and their hostnames by hovering over nodes. At your scheduled reservation time, **open two terminals** and ssh into the assigned Colosseum SRNs (see instructions on [Logging into an SRN](https://colosseumneu.freshdesk.com/en/support/solutions/articles/61000253366-logging-into-an-srn)):
+3. In the reservation page, you can find the assigned SRNs/nodes and their hostnames by hovering over nodes. At your scheduled reservation time, **open two terminals** and ssh into the assigned Colosseum SRNs (see instructions on [Logging into an SRN](https://colosseumwireless.readthedocs.io/en/latest/getting_started/logging_into_an_srn.html)):
 
     ```bash
     ssh -Y <srn-hostname> # <srn-hostname> is usually <team-name>-<srn-id>.  # for this class gladiators-<srn-id>
@@ -104,7 +104,7 @@ Colosseum presents to its users the available containers images in the related t
 
     Please note that: this command will not work if you have not setup your ssh config files by following the instructions in SSH Proxy Setup (see the pre-requisites section for more information). Moreover, the `-Y` flag allows the use of GUI applications. Some old `ssh` versions may still use the `-X` flag for the same purpose, thus if you are not able to see any graphical output after the step 6 of this section, logout and login again with the command `ssh <srn-hostname> -X`. Finally, the password is the one you have set on step 6 of the previous Container Customization section.
 
-4. In one of the terminals, run the following command to start a Colosseum Radio-frequency (RF) scenario through the Colosseum CLI API (see instructions [here](https://colosseumneu.freshdesk.com/en/support/solutions/articles/61000253397-colosseum-cli)). When the scenario starts, an output similar to the following is returned (time is in UTC):
+4. In one of the terminals, run the following command to start a Colosseum Radio-frequency (RF) scenario through the Colosseum CLI API (see instructions [here](https://colosseumwireless.readthedocs.io/en/latest/radio_api_traffic/colosseum_cli.html)). When the scenario starts, an output similar to the following is returned (time is in UTC):
 
     ```bash
     colosseumcli rf start 1009 -c
@@ -116,7 +116,7 @@ Colosseum presents to its users the available containers images in the related t
     Scenario Start Time is 22:30:45
     ```
 
-    This will engage the Colosseum Massive Channel Emulator and make the necessary connections between the USRPs of the reserved nodes based on the parameters set in the specific RF scenario (see the [Scenario Summary List](https://colosseumneu.freshdesk.com/en/support/solutions/articles/61000276224-scenarios-summary-list)). In this assignment, we will use the [Test Scenario All Paths 0 dB (1009)](https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test-scenario-all-paths-0-db-1009). You can check if the RF scenario is active and running by executing the following command: `colosseumcli rf info`.
+    This will engage the Colosseum Massive Channel Emulator and make the necessary connections between the USRPs of the reserved nodes based on the parameters set in the specific RF scenario (see the [Scenario Summary List](https://colosseumwireless.readthedocs.io/en/latest/scenarios/index.html)). In this assignment, we will use the [Test Scenario All Paths 0 dB (1009)](https://colosseumwireless.readthedocs.io/en/latest/scenarios/test_scenarios.html#all-paths-0-db-1009). You can check if the RF scenario is active and running by executing the following command: `colosseumcli rf info`.
 
 5. In both terminals, update the FPGA firmware `./flash_fpga_x310.sh`. This step ensures the correct firmware is present in the Software Defined Radios by flashing its bitfile.
 

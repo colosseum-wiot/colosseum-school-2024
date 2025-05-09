@@ -1,11 +1,11 @@
 # Sounding Assignment
 
-In this assignment, we will leverage CaST [[1]](#cite1) [[2]](#cite2), a toolchain for scenario creation and validation, to perform channel sounding of a Colosseum scenario (in this case [Test Scenario All Paths 0 dB (1009)](https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test-scenario-all-paths-0-db-1009)). The toolchain uses GNU Radio, a free & open-source software development toolkit, to transmit and receive signals, and can use either Python or Matlab scripts to post-process the data.
+In this assignment, we will leverage CaST [[1]](#cite1) [[2]](#cite2), a toolchain for scenario creation and validation, to perform channel sounding of a Colosseum scenario (in this case [Test Scenario All Paths 0 dB (1009)](https://colosseumwireless.readthedocs.io/en/latest/scenarios/test_scenarios.html#all-paths-0-db-1009)). The toolchain uses GNU Radio, a free & open-source software development toolkit, to transmit and receive signals, and can use either Python or Matlab scripts to post-process the data.
 
 ## Make a reservation on Colosseum
 
-1. Connect to Colosseum VPN (instructions [here](https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect-remote-vpn-access) and login to [Colosseum website](https://experiments.colosseum.net)).
-2. Make a reservation with two SRNs with the `cast` common image and check the **"Octoclock"** flag (see instructions on [Making a Reservation](https://colosseumneu.freshdesk.com/en/support/solutions/articles/61000253463-making-a-reservation-interactive-and-batch-mode-)).
+1. Connect to Colosseum VPN (instructions [here](https://colosseumwireless.readthedocs.io/en/latest/getting_started/cisco_anyconnect_remote_vpn_access.html) and login to [Colosseum website](https://experiments.colosseum.net)).
+2. Make a reservation with two SRNs with the `cast` common image and check the **"Octoclock"** flag (see instructions on [Making a Reservation](https://colosseumwireless.readthedocs.io/en/latest/reservations/making_a_reservation_interactive_and_batch_mode.html)).
 Call the reservation in a meaningful way (e.g., your name). Two hours should suffice.
 3. On the reservation page, you can find the assigned SRNs/nodes and their hostnames by hovering over nodes.
 At your scheduled reservation time, open two terminals and ssh as `root` user into the assigned Colosseum SRNs: `ssh root@<srn-hostname>` (The password for the `cast` container is `cast123`).
@@ -122,18 +122,18 @@ Matlab should plot similar results as Python, showing the pathloss information o
 
 ## Optional: Sounding more complex scenarios
 
-In the previous case, we have sounded the [Test Scenario All Paths 0 dB (1009)](https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test-scenario-all-paths-0-db-1009), which is just single tap and with a nominal loss of 0 dB. However, CaST is able to sound more complex scenarios, e.g., multi-taps and mobile.
+In the previous case, we have sounded the [Test Scenario All Paths 0 dB (1009)](https://colosseumwireless.readthedocs.io/en/latest/scenarios/test_scenarios.html#all-paths-0-db-1009), which is just single tap and with a nominal loss of 0 dB. However, CaST is able to sound more complex scenarios, e.g., multi-taps and mobile.
 
-You can first try to sound fixed pathloss scenarios to check how the results would change with different pathlosses (Reference: [Fixed Pathloss Scenarios (51000-51100)](https://colosseumneu.freshdesk.com/a/solutions/articles/61000306131)):
+You can first try to sound fixed pathloss scenarios to check how the results would change with different pathlosses (Reference: [Fixed Pathloss Scenarios (51000-51100)](https://colosseumwireless.readthedocs.io/en/latest/scenarios/fixed_pathloss_scenarios.html#scenarios-51000-51100)):
 - Scenario 51005 with any link: 5 dB pathloss.
 - Scenario 51015 with any link: 15 dB pathloss.
 
-Moreover, during the development of CaST, different Channel Sounding Scenarios have been created to test its capabilities, which can be found here: [Channel Sounding Scenarios (90000-90100)](https://colosseumneu.freshdesk.com/a/solutions/articles/61000305623). You can try to sound the following scenario links for more meaningful results:
+Moreover, during the development of CaST, different Channel Sounding Scenarios have been created to test its capabilities, which can be found here: [Channel Sounding Scenarios (90000-90100)](https://colosseumwireless.readthedocs.io/en/latest/scenarios/channel_sounding_scenarios.html). You can try to sound the following scenario links for more meaningful results:
 - Scenario 90002 with link 1-2
 - Scenario 90001 with link 4-5;
 - Scenario 90001 with link 3-4;
 
-A complete list of Colosseum scenarios with their corresponding information available for all users can be found here: [Scenario Summary List](https://colosseumneu.freshdesk.com/a/solutions/articles/61000306089).
+A complete list of Colosseum scenarios with their corresponding information available for all users can be found here: [Scenario Summary List](https://colosseumwireless.readthedocs.io/en/latest/scenarios/index.html).
 
 
 ## Clean up
